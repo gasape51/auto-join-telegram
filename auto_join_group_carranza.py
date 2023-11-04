@@ -35,7 +35,7 @@ async def main():
                 start_time = time.time()
 
                 # regex to find the "group code" i.e the second part of the link
-                match = re.search(r'https://t\.me/\+([A-Za-z0-9_]+)', event.text)
+                match = re.search(r'https://t\.me/\+([A-Za-z0-9_\-]+)', event.text)
                 if match:
                     group_code = match.group(1)
                     try:
